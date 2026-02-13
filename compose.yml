@@ -1,0 +1,12 @@
+services:
+  app:
+    build: .
+    container_name: node-server
+    ports:
+      - "5000:5000"
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - "NODE_ENV=production"
+
